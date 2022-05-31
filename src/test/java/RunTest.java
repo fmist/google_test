@@ -20,7 +20,7 @@ public class RunTest {
         new MainPage()
                 .openMainPage()
                 .setValue("beyonce")
-                .getValues(100)
+                .getValues(0)
                 .openFirstLink();
     }
 }
