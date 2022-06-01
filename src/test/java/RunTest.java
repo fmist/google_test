@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverProvider;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -13,6 +14,7 @@ public class RunTest {
     @BeforeAll
     static void setUp() {
         System.setProperty("webdriver.chrome.driver", "/Users/grbm/IdeaProjects/google_test/chromedriver");
+        Selenide.open("https://google.com");
     }
 
     @Owner("grbm")
@@ -20,7 +22,6 @@ public class RunTest {
     @Test
     public void test1() {
         new MainPage()
-                .openMainPage()
                 .setValue("macbook pro")
                 .getValues(0)
                 .openFirstLink();
@@ -29,7 +30,6 @@ public class RunTest {
     @Test
     public void test2() {
         new MainPage()
-                .openMainPage()
                 .setValue("beyonce")
                 .getValues(0)
                 .openFirstLink();
