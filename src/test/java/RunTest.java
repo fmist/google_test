@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverProvider;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
@@ -11,7 +12,7 @@ public class RunTest {
 
     @BeforeAll
     static void setUp() {
-        Configuration.browser = "chrome";
+        Configuration.browser = MyWDProvider.class.getName();
     }
 
     @Owner("grbm")
