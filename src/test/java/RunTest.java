@@ -6,12 +6,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RunTest {
 
-    @BeforeAll
+    @BeforeEach
     static void setUp() {
         Selenide.open("https://google.com");
     }
