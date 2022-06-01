@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class RunTest {
 
     @BeforeEach
-    static void setUp() {
+    public void setUp() {
         Selenide.open("https://google.com");
     }
 
