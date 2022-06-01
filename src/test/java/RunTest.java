@@ -12,7 +12,7 @@ public class RunTest {
 
     @BeforeAll
     static void setUp() {
-        Configuration.browser = MyWDProvider.class.getName();
+        System.setProperty("webdriver.chrome.driver", "/Users/grbm/IdeaProjects/google_test/chromedriver");
     }
 
     @Owner("grbm")
