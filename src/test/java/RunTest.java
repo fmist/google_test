@@ -9,7 +9,7 @@ public class RunTest {
 
     @BeforeAll
     static void setUp() {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/Users/grbm/IdeaProjects/google_test/chromedriver");
     }
 
     @Owner("grbm")
