@@ -1,15 +1,17 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RunTest {
 
     @BeforeAll
     static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/Users/grbm/IdeaProjects/google_test/chromedriver");
+        Configuration.browser = "chrome";
     }
 
     @Owner("grbm")
