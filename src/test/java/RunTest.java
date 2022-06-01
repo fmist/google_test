@@ -13,7 +13,6 @@ public class RunTest {
 
     @BeforeAll
     static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "https://github.com/fmist/google_test/blob/57e1d65646fa9e99468108293f2436134fb3c8ce/chromedriver");
         Selenide.open("https://google.com");
     }
 
